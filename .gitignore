@@ -5,6 +5,7 @@
 bin/
 obj/
 logs/
+coveragereport/
 
 ### VisualStudioCode ###
 .vscode
