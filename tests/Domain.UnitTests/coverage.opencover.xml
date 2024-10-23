@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <CoverageSession>
-  <Summary numSequencePoints="140" visitedSequencePoints="115" numBranchPoints="30" visitedBranchPoints="15" sequenceCoverage="82.14" branchCoverage="50" maxCyclomaticComplexity="89" minCyclomaticComplexity="89" visitedClasses="8" numClasses="8" visitedMethods="59" numMethods="69" />
+  <Summary numSequencePoints="140" visitedSequencePoints="123" numBranchPoints="30" visitedBranchPoints="20" sequenceCoverage="87.85" branchCoverage="66.66" maxCyclomaticComplexity="89" minCyclomaticComplexity="89" visitedClasses="8" numClasses="8" visitedMethods="61" numMethods="69" />
   <Modules>
-    <Module hash="E25802CF-B5ED-41CA-84D8-08EF0E676661">
+    <Module hash="D88A6D67-1642-4C51-97C5-B9A734F4D027">
       <ModulePath>Domain.dll</ModulePath>
-      <ModuleTime>2024-10-23T09:20:52</ModuleTime>
+      <ModuleTime>2024-10-23T09:31:55</ModuleTime>
       <ModuleName>Domain</ModuleName>
       <Files>
         <File uid="1" fullPath="/home/miorio/dotfiles/fiddle/ScanMail/src/Domain/Primitives/Entity.cs" />
@@ -14,7 +14,7 @@
       </Files>
       <Classes>
         <Class>
-          <Summary numSequencePoints="23" visitedSequencePoints="19" numBranchPoints="8" visitedBranchPoints="7" sequenceCoverage="82.6" branchCoverage="87.5" maxCyclomaticComplexity="4" minCyclomaticComplexity="1" visitedClasses="1" numClasses="1" visitedMethods="6" numMethods="7" />
+          <Summary numSequencePoints="23" visitedSequencePoints="23" numBranchPoints="8" visitedBranchPoints="8" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="4" minCyclomaticComplexity="1" visitedClasses="1" numClasses="1" visitedMethods="7" numMethods="7" />
           <FullName>Domain.Primitives.Entity`1</FullName>
           <Methods>
             <Method cyclomaticComplexity="1" nPathComplexity="1" sequenceCoverage="100" branchCoverage="100" isConstructor="False" isGetter="True" isSetter="False" isStatic="True">
@@ -23,28 +23,28 @@
               <Name>TId Domain.Primitives.Entity`1::get_Id()</Name>
               <FileRef uid="1" />
               <SequencePoints>
-                <SequencePoint vc="25" uspid="6" ordinal="0" sl="6" sc="1" el="6" ec="2" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="41" uspid="6" ordinal="0" sl="6" sc="1" el="6" ec="2" bec="0" bev="0" fileid="1" />
               </SequencePoints>
               <BranchPoints />
               <MethodPoint vc="1" uspid="0" p8:type="SequencePoint" ordinal="0" offset="0" sc="0" sl="6" ec="1" el="6" bec="0" bev="0" fileid="1" xmlns:p8="xsi" />
             </Method>
-            <Method cyclomaticComplexity="2" nPathComplexity="2" sequenceCoverage="80" branchCoverage="50" isConstructor="False" isGetter="False" isSetter="False" isStatic="True">
-              <Summary numSequencePoints="5" visitedSequencePoints="4" numBranchPoints="2" visitedBranchPoints="1" sequenceCoverage="80" branchCoverage="50" maxCyclomaticComplexity="2" minCyclomaticComplexity="2" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+            <Method cyclomaticComplexity="2" nPathComplexity="2" sequenceCoverage="100" branchCoverage="100" isConstructor="False" isGetter="False" isSetter="False" isStatic="True">
+              <Summary numSequencePoints="5" visitedSequencePoints="5" numBranchPoints="2" visitedBranchPoints="2" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="2" minCyclomaticComplexity="2" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
               <MetadataToken />
               <Name>System.Boolean Domain.Primitives.Entity`1::Equals(System.Object)</Name>
               <FileRef uid="1" />
               <SequencePoints>
-                <SequencePoint vc="4" uspid="8" ordinal="0" sl="8" sc="1" el="8" ec="2" bec="2" bev="1" fileid="1" />
-                <SequencePoint vc="4" uspid="9" ordinal="1" sl="9" sc="1" el="9" ec="2" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="5" uspid="8" ordinal="0" sl="8" sc="1" el="8" ec="2" bec="2" bev="2" fileid="1" />
+                <SequencePoint vc="5" uspid="9" ordinal="1" sl="9" sc="1" el="9" ec="2" bec="0" bev="0" fileid="1" />
                 <SequencePoint vc="4" uspid="10" ordinal="2" sl="10" sc="1" el="10" ec="2" bec="0" bev="0" fileid="1" />
-                <SequencePoint vc="0" uspid="11" ordinal="3" sl="11" sc="1" el="11" ec="2" bec="0" bev="0" fileid="1" />
-                <SequencePoint vc="4" uspid="12" ordinal="4" sl="12" sc="1" el="12" ec="2" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="11" ordinal="3" sl="11" sc="1" el="11" ec="2" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="5" uspid="12" ordinal="4" sl="12" sc="1" el="12" ec="2" bec="0" bev="0" fileid="1" />
               </SequencePoints>
               <BranchPoints>
                 <BranchPoint vc="4" uspid="8" ordinal="1" path="1" offset="12" offsetend="18" sl="8" fileid="1" />
-                <BranchPoint vc="0" uspid="8" ordinal="0" path="0" offset="12" offsetend="28" sl="8" fileid="1" />
+                <BranchPoint vc="1" uspid="8" ordinal="0" path="0" offset="12" offsetend="28" sl="8" fileid="1" />
               </BranchPoints>
-              <MethodPoint vc="4" uspid="0" p8:type="SequencePoint" ordinal="1" offset="1" sc="0" sl="8" ec="1" el="12" bec="0" bev="0" fileid="1" xmlns:p8="xsi" />
+              <MethodPoint vc="5" uspid="0" p8:type="SequencePoint" ordinal="1" offset="1" sc="0" sl="8" ec="1" el="12" bec="0" bev="0" fileid="1" xmlns:p8="xsi" />
             </Method>
             <Method cyclomaticComplexity="2" nPathComplexity="2" sequenceCoverage="100" branchCoverage="100" isConstructor="False" isGetter="False" isSetter="False" isStatic="True">
               <Summary numSequencePoints="5" visitedSequencePoints="5" numBranchPoints="2" visitedBranchPoints="2" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="2" minCyclomaticComplexity="2" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
@@ -52,15 +52,15 @@
               <Name>System.Boolean Domain.Primitives.Entity`1::Equals(Domain.Primitives.Entity`1&lt;TId&gt;)</Name>
               <FileRef uid="1" />
               <SequencePoints>
-                <SequencePoint vc="11" uspid="14" ordinal="0" sl="14" sc="1" el="14" ec="2" bec="2" bev="2" fileid="1" />
-                <SequencePoint vc="11" uspid="15" ordinal="1" sl="15" sc="1" el="15" ec="2" bec="0" bev="0" fileid="1" />
-                <SequencePoint vc="10" uspid="16" ordinal="2" sl="16" sc="1" el="16" ec="2" bec="0" bev="0" fileid="1" />
-                <SequencePoint vc="1" uspid="17" ordinal="3" sl="17" sc="1" el="17" ec="2" bec="0" bev="0" fileid="1" />
-                <SequencePoint vc="11" uspid="18" ordinal="4" sl="18" sc="1" el="18" ec="2" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="14" uspid="14" ordinal="0" sl="14" sc="1" el="14" ec="2" bec="2" bev="2" fileid="1" />
+                <SequencePoint vc="14" uspid="15" ordinal="1" sl="15" sc="1" el="15" ec="2" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="12" uspid="16" ordinal="2" sl="16" sc="1" el="16" ec="2" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="2" uspid="17" ordinal="3" sl="17" sc="1" el="17" ec="2" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="14" uspid="18" ordinal="4" sl="18" sc="1" el="18" ec="2" bec="0" bev="0" fileid="1" />
               </SequencePoints>
               <BranchPoints>
-                <BranchPoint vc="10" uspid="14" ordinal="1" path="1" offset="5" offsetend="9" sl="14" fileid="1" />
-                <BranchPoint vc="1" uspid="14" ordinal="0" path="0" offset="5" offsetend="43" sl="14" fileid="1" />
+                <BranchPoint vc="12" uspid="14" ordinal="1" path="1" offset="5" offsetend="9" sl="14" fileid="1" />
+                <BranchPoint vc="2" uspid="14" ordinal="0" path="0" offset="5" offsetend="43" sl="14" fileid="1" />
               </BranchPoints>
               <MethodPoint vc="5" uspid="0" p8:type="SequencePoint" ordinal="2" offset="2" sc="0" sl="14" ec="1" el="18" bec="0" bev="0" fileid="1" xmlns:p8="xsi" />
             </Method>
@@ -70,17 +70,17 @@
               <Name>System.Boolean Domain.Primitives.Entity`1::op_Equality(Domain.Primitives.Entity`1&lt;TId&gt;,Domain.Primitives.Entity`1&lt;TId&gt;)</Name>
               <FileRef uid="1" />
               <SequencePoints>
-                <SequencePoint vc="6" uspid="20" ordinal="0" sl="20" sc="1" el="20" ec="2" bec="4" bev="4" fileid="1" />
-                <SequencePoint vc="6" uspid="21" ordinal="1" sl="21" sc="1" el="21" ec="2" bec="0" bev="0" fileid="1" />
-                <SequencePoint vc="4" uspid="22" ordinal="2" sl="22" sc="1" el="22" ec="2" bec="0" bev="0" fileid="1" />
-                <SequencePoint vc="2" uspid="23" ordinal="3" sl="23" sc="1" el="23" ec="2" bec="0" bev="0" fileid="1" />
-                <SequencePoint vc="6" uspid="24" ordinal="4" sl="24" sc="1" el="24" ec="2" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="10" uspid="20" ordinal="0" sl="20" sc="1" el="20" ec="2" bec="4" bev="4" fileid="1" />
+                <SequencePoint vc="10" uspid="21" ordinal="1" sl="21" sc="1" el="21" ec="2" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="6" uspid="22" ordinal="2" sl="22" sc="1" el="22" ec="2" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="4" uspid="23" ordinal="3" sl="23" sc="1" el="23" ec="2" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="10" uspid="24" ordinal="4" sl="24" sc="1" el="24" ec="2" bec="0" bev="0" fileid="1" />
               </SequencePoints>
               <BranchPoints>
-                <BranchPoint vc="6" uspid="20" ordinal="0" path="0" offset="9" offsetend="11" sl="20" fileid="1" />
-                <BranchPoint vc="4" uspid="20" ordinal="3" path="1" offset="12" offsetend="18" sl="20" fileid="1" />
-                <BranchPoint vc="2" uspid="20" ordinal="1" path="1" offset="9" offsetend="28" sl="20" fileid="1" />
-                <BranchPoint vc="2" uspid="20" ordinal="2" path="0" offset="12" offsetend="28" sl="20" fileid="1" />
+                <BranchPoint vc="9" uspid="20" ordinal="0" path="0" offset="9" offsetend="11" sl="20" fileid="1" />
+                <BranchPoint vc="6" uspid="20" ordinal="3" path="1" offset="12" offsetend="18" sl="20" fileid="1" />
+                <BranchPoint vc="4" uspid="20" ordinal="1" path="1" offset="9" offsetend="28" sl="20" fileid="1" />
+                <BranchPoint vc="4" uspid="20" ordinal="2" path="0" offset="12" offsetend="28" sl="20" fileid="1" />
               </BranchPoints>
               <MethodPoint vc="5" uspid="0" p8:type="SequencePoint" ordinal="3" offset="3" sc="0" sl="20" ec="1" el="24" bec="0" bev="0" fileid="1" xmlns:p8="xsi" />
             </Method>
@@ -90,25 +90,25 @@
               <Name>System.Boolean Domain.Primitives.Entity`1::op_Inequality(Domain.Primitives.Entity`1&lt;TId&gt;,Domain.Primitives.Entity`1&lt;TId&gt;)</Name>
               <FileRef uid="1" />
               <SequencePoints>
-                <SequencePoint vc="3" uspid="27" ordinal="0" sl="27" sc="1" el="27" ec="2" bec="0" bev="0" fileid="1" />
-                <SequencePoint vc="3" uspid="28" ordinal="1" sl="28" sc="1" el="28" ec="2" bec="0" bev="0" fileid="1" />
-                <SequencePoint vc="3" uspid="29" ordinal="2" sl="29" sc="1" el="29" ec="2" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="4" uspid="27" ordinal="0" sl="27" sc="1" el="27" ec="2" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="4" uspid="28" ordinal="1" sl="28" sc="1" el="28" ec="2" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="4" uspid="29" ordinal="2" sl="29" sc="1" el="29" ec="2" bec="0" bev="0" fileid="1" />
               </SequencePoints>
               <BranchPoints />
               <MethodPoint vc="3" uspid="0" p8:type="SequencePoint" ordinal="4" offset="4" sc="0" sl="27" ec="1" el="29" bec="0" bev="0" fileid="1" xmlns:p8="xsi" />
             </Method>
-            <Method cyclomaticComplexity="1" nPathComplexity="1" sequenceCoverage="0" branchCoverage="100" isConstructor="False" isGetter="False" isSetter="False" isStatic="True">
-              <Summary numSequencePoints="3" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" />
+            <Method cyclomaticComplexity="1" nPathComplexity="1" sequenceCoverage="100" branchCoverage="100" isConstructor="False" isGetter="False" isSetter="False" isStatic="True">
+              <Summary numSequencePoints="3" visitedSequencePoints="3" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
               <MetadataToken />
               <Name>System.Int32 Domain.Primitives.Entity`1::GetHashCode()</Name>
               <FileRef uid="1" />
               <SequencePoints>
-                <SequencePoint vc="0" uspid="32" ordinal="0" sl="32" sc="1" el="32" ec="2" bec="0" bev="0" fileid="1" />
-                <SequencePoint vc="0" uspid="33" ordinal="1" sl="33" sc="1" el="33" ec="2" bec="0" bev="0" fileid="1" />
-                <SequencePoint vc="0" uspid="34" ordinal="2" sl="34" sc="1" el="34" ec="2" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="4" uspid="32" ordinal="0" sl="32" sc="1" el="32" ec="2" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="4" uspid="33" ordinal="1" sl="33" sc="1" el="33" ec="2" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="4" uspid="34" ordinal="2" sl="34" sc="1" el="34" ec="2" bec="0" bev="0" fileid="1" />
               </SequencePoints>
               <BranchPoints />
-              <MethodPoint vc="0" uspid="0" p8:type="SequencePoint" ordinal="5" offset="5" sc="0" sl="32" ec="1" el="34" bec="0" bev="0" fileid="1" xmlns:p8="xsi" />
+              <MethodPoint vc="3" uspid="0" p8:type="SequencePoint" ordinal="5" offset="5" sc="0" sl="32" ec="1" el="34" bec="0" bev="0" fileid="1" xmlns:p8="xsi" />
             </Method>
             <Method cyclomaticComplexity="1" nPathComplexity="1" sequenceCoverage="100" branchCoverage="100" isConstructor="True" isGetter="False" isSetter="False" isStatic="True">
               <Summary numSequencePoints="1" visitedSequencePoints="1" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
@@ -116,7 +116,7 @@
               <Name>System.Void Domain.Primitives.Entity`1::.ctor(TId)</Name>
               <FileRef uid="1" />
               <SequencePoints>
-                <SequencePoint vc="5" uspid="3" ordinal="0" sl="3" sc="1" el="3" ec="2" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="13" uspid="3" ordinal="0" sl="3" sc="1" el="3" ec="2" bec="0" bev="0" fileid="1" />
               </SequencePoints>
               <BranchPoints />
               <MethodPoint vc="1" uspid="0" p8:type="SequencePoint" ordinal="6" offset="6" sc="0" sl="3" ec="1" el="3" bec="0" bev="0" fileid="1" xmlns:p8="xsi" />
@@ -835,64 +835,64 @@
           </Methods>
         </Class>
         <Class>
-          <Summary numSequencePoints="20" visitedSequencePoints="16" numBranchPoints="8" visitedBranchPoints="4" sequenceCoverage="80" branchCoverage="50" maxCyclomaticComplexity="4" minCyclomaticComplexity="1" visitedClasses="1" numClasses="1" visitedMethods="5" numMethods="6" />
+          <Summary numSequencePoints="20" visitedSequencePoints="20" numBranchPoints="8" visitedBranchPoints="8" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="4" minCyclomaticComplexity="1" visitedClasses="1" numClasses="1" visitedMethods="6" numMethods="6" />
           <FullName>Domain.Primitives.ValueObject</FullName>
           <Methods>
-            <Method cyclomaticComplexity="2" nPathComplexity="2" sequenceCoverage="80" branchCoverage="50" isConstructor="False" isGetter="False" isSetter="False" isStatic="True">
-              <Summary numSequencePoints="5" visitedSequencePoints="4" numBranchPoints="2" visitedBranchPoints="1" sequenceCoverage="80" branchCoverage="50" maxCyclomaticComplexity="2" minCyclomaticComplexity="2" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+            <Method cyclomaticComplexity="2" nPathComplexity="2" sequenceCoverage="100" branchCoverage="100" isConstructor="False" isGetter="False" isSetter="False" isStatic="True">
+              <Summary numSequencePoints="5" visitedSequencePoints="5" numBranchPoints="2" visitedBranchPoints="2" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="2" minCyclomaticComplexity="2" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
               <MetadataToken />
               <Name>System.Boolean Domain.Primitives.ValueObject::Equals(Domain.Primitives.ValueObject)</Name>
               <FileRef uid="4" />
               <SequencePoints>
-                <SequencePoint vc="10" uspid="7" ordinal="0" sl="7" sc="1" el="7" ec="2" bec="2" bev="1" fileid="4" />
-                <SequencePoint vc="10" uspid="8" ordinal="1" sl="8" sc="1" el="8" ec="2" bec="0" bev="0" fileid="4" />
-                <SequencePoint vc="10" uspid="9" ordinal="2" sl="9" sc="1" el="9" ec="2" bec="0" bev="0" fileid="4" />
-                <SequencePoint vc="0" uspid="10" ordinal="3" sl="10" sc="1" el="10" ec="2" bec="0" bev="0" fileid="4" />
-                <SequencePoint vc="10" uspid="11" ordinal="4" sl="11" sc="1" el="11" ec="2" bec="0" bev="0" fileid="4" />
+                <SequencePoint vc="13" uspid="7" ordinal="0" sl="7" sc="1" el="7" ec="2" bec="2" bev="2" fileid="4" />
+                <SequencePoint vc="13" uspid="8" ordinal="1" sl="8" sc="1" el="8" ec="2" bec="0" bev="0" fileid="4" />
+                <SequencePoint vc="12" uspid="9" ordinal="2" sl="9" sc="1" el="9" ec="2" bec="0" bev="0" fileid="4" />
+                <SequencePoint vc="1" uspid="10" ordinal="3" sl="10" sc="1" el="10" ec="2" bec="0" bev="0" fileid="4" />
+                <SequencePoint vc="13" uspid="11" ordinal="4" sl="11" sc="1" el="11" ec="2" bec="0" bev="0" fileid="4" />
               </SequencePoints>
               <BranchPoints>
-                <BranchPoint vc="10" uspid="7" ordinal="1" path="1" offset="5" offsetend="9" sl="7" fileid="4" />
-                <BranchPoint vc="0" uspid="7" ordinal="0" path="0" offset="5" offsetend="23" sl="7" fileid="4" />
+                <BranchPoint vc="12" uspid="7" ordinal="1" path="1" offset="5" offsetend="9" sl="7" fileid="4" />
+                <BranchPoint vc="1" uspid="7" ordinal="0" path="0" offset="5" offsetend="23" sl="7" fileid="4" />
               </BranchPoints>
-              <MethodPoint vc="4" uspid="0" p8:type="SequencePoint" ordinal="0" offset="0" sc="0" sl="7" ec="1" el="11" bec="0" bev="0" fileid="4" xmlns:p8="xsi" />
+              <MethodPoint vc="5" uspid="0" p8:type="SequencePoint" ordinal="0" offset="0" sc="0" sl="7" ec="1" el="11" bec="0" bev="0" fileid="4" xmlns:p8="xsi" />
             </Method>
-            <Method cyclomaticComplexity="2" nPathComplexity="2" sequenceCoverage="80" branchCoverage="50" isConstructor="False" isGetter="False" isSetter="False" isStatic="True">
-              <Summary numSequencePoints="5" visitedSequencePoints="4" numBranchPoints="2" visitedBranchPoints="1" sequenceCoverage="80" branchCoverage="50" maxCyclomaticComplexity="2" minCyclomaticComplexity="2" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+            <Method cyclomaticComplexity="2" nPathComplexity="2" sequenceCoverage="100" branchCoverage="100" isConstructor="False" isGetter="False" isSetter="False" isStatic="True">
+              <Summary numSequencePoints="5" visitedSequencePoints="5" numBranchPoints="2" visitedBranchPoints="2" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="2" minCyclomaticComplexity="2" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
               <MetadataToken />
               <Name>System.Boolean Domain.Primitives.ValueObject::Equals(System.Object)</Name>
               <FileRef uid="4" />
               <SequencePoints>
-                <SequencePoint vc="2" uspid="13" ordinal="0" sl="13" sc="1" el="13" ec="2" bec="2" bev="1" fileid="4" />
-                <SequencePoint vc="2" uspid="14" ordinal="1" sl="14" sc="1" el="14" ec="2" bec="0" bev="0" fileid="4" />
-                <SequencePoint vc="2" uspid="15" ordinal="2" sl="15" sc="1" el="15" ec="2" bec="0" bev="0" fileid="4" />
-                <SequencePoint vc="0" uspid="16" ordinal="3" sl="16" sc="1" el="16" ec="2" bec="0" bev="0" fileid="4" />
-                <SequencePoint vc="2" uspid="17" ordinal="4" sl="17" sc="1" el="17" ec="2" bec="0" bev="0" fileid="4" />
+                <SequencePoint vc="5" uspid="13" ordinal="0" sl="13" sc="1" el="13" ec="2" bec="2" bev="2" fileid="4" />
+                <SequencePoint vc="5" uspid="14" ordinal="1" sl="14" sc="1" el="14" ec="2" bec="0" bev="0" fileid="4" />
+                <SequencePoint vc="4" uspid="15" ordinal="2" sl="15" sc="1" el="15" ec="2" bec="0" bev="0" fileid="4" />
+                <SequencePoint vc="1" uspid="16" ordinal="3" sl="16" sc="1" el="16" ec="2" bec="0" bev="0" fileid="4" />
+                <SequencePoint vc="5" uspid="17" ordinal="4" sl="17" sc="1" el="17" ec="2" bec="0" bev="0" fileid="4" />
               </SequencePoints>
               <BranchPoints>
-                <BranchPoint vc="2" uspid="13" ordinal="1" path="1" offset="12" offsetend="18" sl="13" fileid="4" />
-                <BranchPoint vc="0" uspid="13" ordinal="0" path="0" offset="12" offsetend="28" sl="13" fileid="4" />
+                <BranchPoint vc="4" uspid="13" ordinal="1" path="1" offset="12" offsetend="18" sl="13" fileid="4" />
+                <BranchPoint vc="1" uspid="13" ordinal="0" path="0" offset="12" offsetend="28" sl="13" fileid="4" />
               </BranchPoints>
-              <MethodPoint vc="4" uspid="0" p8:type="SequencePoint" ordinal="1" offset="1" sc="0" sl="13" ec="1" el="17" bec="0" bev="0" fileid="4" xmlns:p8="xsi" />
+              <MethodPoint vc="5" uspid="0" p8:type="SequencePoint" ordinal="1" offset="1" sc="0" sl="13" ec="1" el="17" bec="0" bev="0" fileid="4" xmlns:p8="xsi" />
             </Method>
-            <Method cyclomaticComplexity="4" nPathComplexity="4" sequenceCoverage="80" branchCoverage="50" isConstructor="False" isGetter="False" isSetter="False" isStatic="True">
-              <Summary numSequencePoints="5" visitedSequencePoints="4" numBranchPoints="4" visitedBranchPoints="2" sequenceCoverage="80" branchCoverage="50" maxCyclomaticComplexity="4" minCyclomaticComplexity="4" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+            <Method cyclomaticComplexity="4" nPathComplexity="4" sequenceCoverage="100" branchCoverage="100" isConstructor="False" isGetter="False" isSetter="False" isStatic="True">
+              <Summary numSequencePoints="5" visitedSequencePoints="5" numBranchPoints="4" visitedBranchPoints="4" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="4" minCyclomaticComplexity="4" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
               <MetadataToken />
               <Name>System.Boolean Domain.Primitives.ValueObject::op_Equality(Domain.Primitives.ValueObject,Domain.Primitives.ValueObject)</Name>
               <FileRef uid="4" />
               <SequencePoints>
-                <SequencePoint vc="4" uspid="19" ordinal="0" sl="19" sc="1" el="19" ec="2" bec="4" bev="2" fileid="4" />
-                <SequencePoint vc="4" uspid="20" ordinal="1" sl="20" sc="1" el="20" ec="2" bec="0" bev="0" fileid="4" />
+                <SequencePoint vc="8" uspid="19" ordinal="0" sl="19" sc="1" el="19" ec="2" bec="4" bev="4" fileid="4" />
+                <SequencePoint vc="8" uspid="20" ordinal="1" sl="20" sc="1" el="20" ec="2" bec="0" bev="0" fileid="4" />
                 <SequencePoint vc="4" uspid="21" ordinal="2" sl="21" sc="1" el="21" ec="2" bec="0" bev="0" fileid="4" />
-                <SequencePoint vc="0" uspid="22" ordinal="3" sl="22" sc="1" el="22" ec="2" bec="0" bev="0" fileid="4" />
-                <SequencePoint vc="4" uspid="23" ordinal="4" sl="23" sc="1" el="23" ec="2" bec="0" bev="0" fileid="4" />
+                <SequencePoint vc="4" uspid="22" ordinal="3" sl="22" sc="1" el="22" ec="2" bec="0" bev="0" fileid="4" />
+                <SequencePoint vc="8" uspid="23" ordinal="4" sl="23" sc="1" el="23" ec="2" bec="0" bev="0" fileid="4" />
               </SequencePoints>
               <BranchPoints>
-                <BranchPoint vc="4" uspid="19" ordinal="0" path="0" offset="9" offsetend="11" sl="19" fileid="4" />
+                <BranchPoint vc="6" uspid="19" ordinal="0" path="0" offset="9" offsetend="11" sl="19" fileid="4" />
                 <BranchPoint vc="4" uspid="19" ordinal="3" path="1" offset="12" offsetend="18" sl="19" fileid="4" />
-                <BranchPoint vc="0" uspid="19" ordinal="1" path="1" offset="9" offsetend="28" sl="19" fileid="4" />
-                <BranchPoint vc="0" uspid="19" ordinal="2" path="0" offset="12" offsetend="28" sl="19" fileid="4" />
+                <BranchPoint vc="4" uspid="19" ordinal="1" path="1" offset="9" offsetend="28" sl="19" fileid="4" />
+                <BranchPoint vc="4" uspid="19" ordinal="2" path="0" offset="12" offsetend="28" sl="19" fileid="4" />
               </BranchPoints>
-              <MethodPoint vc="4" uspid="0" p8:type="SequencePoint" ordinal="2" offset="2" sc="0" sl="19" ec="1" el="23" bec="0" bev="0" fileid="4" xmlns:p8="xsi" />
+              <MethodPoint vc="5" uspid="0" p8:type="SequencePoint" ordinal="2" offset="2" sc="0" sl="19" ec="1" el="23" bec="0" bev="0" fileid="4" xmlns:p8="xsi" />
             </Method>
             <Method cyclomaticComplexity="1" nPathComplexity="1" sequenceCoverage="100" branchCoverage="100" isConstructor="False" isGetter="False" isSetter="False" isStatic="True">
               <Summary numSequencePoints="3" visitedSequencePoints="3" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
@@ -900,23 +900,23 @@
               <Name>System.Boolean Domain.Primitives.ValueObject::op_Inequality(Domain.Primitives.ValueObject,Domain.Primitives.ValueObject)</Name>
               <FileRef uid="4" />
               <SequencePoints>
-                <SequencePoint vc="2" uspid="26" ordinal="0" sl="26" sc="1" el="26" ec="2" bec="0" bev="0" fileid="4" />
-                <SequencePoint vc="2" uspid="27" ordinal="1" sl="27" sc="1" el="27" ec="2" bec="0" bev="0" fileid="4" />
-                <SequencePoint vc="2" uspid="28" ordinal="2" sl="28" sc="1" el="28" ec="2" bec="0" bev="0" fileid="4" />
+                <SequencePoint vc="4" uspid="26" ordinal="0" sl="26" sc="1" el="26" ec="2" bec="0" bev="0" fileid="4" />
+                <SequencePoint vc="4" uspid="27" ordinal="1" sl="27" sc="1" el="27" ec="2" bec="0" bev="0" fileid="4" />
+                <SequencePoint vc="4" uspid="28" ordinal="2" sl="28" sc="1" el="28" ec="2" bec="0" bev="0" fileid="4" />
               </SequencePoints>
               <BranchPoints />
               <MethodPoint vc="3" uspid="0" p8:type="SequencePoint" ordinal="3" offset="3" sc="0" sl="26" ec="1" el="28" bec="0" bev="0" fileid="4" xmlns:p8="xsi" />
             </Method>
-            <Method cyclomaticComplexity="1" nPathComplexity="1" sequenceCoverage="0" branchCoverage="100" isConstructor="False" isGetter="False" isSetter="False" isStatic="True">
-              <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" />
+            <Method cyclomaticComplexity="1" nPathComplexity="1" sequenceCoverage="100" branchCoverage="100" isConstructor="False" isGetter="False" isSetter="False" isStatic="True">
+              <Summary numSequencePoints="1" visitedSequencePoints="1" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
               <MetadataToken />
               <Name>System.Int32 Domain.Primitives.ValueObject::GetHashCode()</Name>
               <FileRef uid="4" />
               <SequencePoints>
-                <SequencePoint vc="0" uspid="31" ordinal="0" sl="31" sc="1" el="31" ec="2" bec="0" bev="0" fileid="4" />
+                <SequencePoint vc="8" uspid="31" ordinal="0" sl="31" sc="1" el="31" ec="2" bec="0" bev="0" fileid="4" />
               </SequencePoints>
               <BranchPoints />
-              <MethodPoint vc="0" uspid="0" p8:type="SequencePoint" ordinal="4" offset="4" sc="0" sl="31" ec="1" el="31" bec="0" bev="0" fileid="4" xmlns:p8="xsi" />
+              <MethodPoint vc="1" uspid="0" p8:type="SequencePoint" ordinal="4" offset="4" sc="0" sl="31" ec="1" el="31" bec="0" bev="0" fileid="4" xmlns:p8="xsi" />
             </Method>
             <Method cyclomaticComplexity="1" nPathComplexity="1" sequenceCoverage="100" branchCoverage="100" isConstructor="False" isGetter="False" isSetter="False" isStatic="True">
               <Summary numSequencePoints="1" visitedSequencePoints="1" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
@@ -924,7 +924,7 @@
               <Name>System.Boolean Domain.Primitives.ValueObject::ValuesAreEqual(Domain.Primitives.ValueObject)</Name>
               <FileRef uid="4" />
               <SequencePoints>
-                <SequencePoint vc="16" uspid="34" ordinal="0" sl="34" sc="1" el="34" ec="2" bec="0" bev="0" fileid="4" />
+                <SequencePoint vc="20" uspid="34" ordinal="0" sl="34" sc="1" el="34" ec="2" bec="0" bev="0" fileid="4" />
               </SequencePoints>
               <BranchPoints />
               <MethodPoint vc="1" uspid="0" p8:type="SequencePoint" ordinal="5" offset="5" sc="0" sl="34" ec="1" el="34" bec="0" bev="0" fileid="4" xmlns:p8="xsi" />

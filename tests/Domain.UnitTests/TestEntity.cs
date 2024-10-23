@@ -48,6 +48,65 @@ public class EntityTests
         entity1.Equals(entity2).Should().BeTrue();
         entity1.Equals((object)entity2).Should().BeTrue();
     }
+    [Fact]
+    public void GetHashCode_ShouldBeConsistent()
+    {
+        // Arrange
+        var id = new FakeID();
+        var entity1 = new FakeEntityA(id);
+        var entity2 = new FakeEntityA(id);
+
+        // Act & Assert
+        entity1.GetHashCode().Should().Be(entity2.GetHashCode());
+    }
+
+    [Fact]
+    public void GetHashCode_ShouldBeDifferentForDifferentIds()
+    {
+        // Arrange
+        var entity1 = new FakeEntityA(new FakeID());
+        var entity2 = new FakeEntityA(new FakeID());
+
+        // Act & Assert
+        entity1.GetHashCode().Should().NotBe(entity2.GetHashCode());
+    }
+
+    [Fact]
+    public void Equals_WithNull_ShouldReturnFalse()
+    {
+        // Arrange
+        var entity = new FakeEntityA(new FakeID());
+
+        // Act & Assert
+        entity.Equals(null).Should().BeFalse();
+    }
+
+    [Fact]
+    public void Equals_WithDifferentObjectType_ShouldReturnFalse()
+    {
+        // Arrange
+        var entity = new FakeEntityA(new FakeID());
+        var obj = new object();
+
+        // Act & Assert
+        entity.Equals(obj).Should().BeFalse();
+    }
+
+    [Fact]
+    public void Equality_Operators_ShouldWorkCorrectly()
+    {
+        // Arrange
+        var id = new FakeID();
+        var entity1 = new FakeEntityA(id);
+        var entity2 = new FakeEntityA(id);
+        FakeEntityA? nullEntity = null;
+
+        // Act & Assert
+        (entity1 == entity2).Should().BeTrue();
+        (entity1 != entity2).Should().BeFalse();
+        (entity1 == nullEntity).Should().BeFalse();
+        (nullEntity == entity1).Should().BeFalse();
+    }
 
     private static (FakeEntityA, FakeEntityB) CreateDifferentEntities()
     {
