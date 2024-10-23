@@ -199,7 +199,8 @@ public abstract class Result<T, E>
     /// <returns>
     /// A Result object that is either:
     /// - Ok with the return value of the function if it executes successfully, or
-    /// - Err with the caught exception if an exception occurs during execution.
+    /// - Err with the caught exception if an exception occurs during execution, or
+    /// - Err with ArgumentNullException if the function returned null.
     /// </returns>
     /// <remarks>
     /// This method provides a way to safely execute operations that might throw exceptions,
