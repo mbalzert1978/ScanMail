@@ -1,4 +1,4 @@
-namespace Domain;
+namespace Domain.Primitives;
 
 public sealed record Error(string Code, string? Description = null)
 {
