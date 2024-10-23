@@ -1,42 +1,31 @@
-namespace Domain;
+namespace Domain.Primitives;
 
-public abstract class Entity(Guid id) : IEquatable<Entity>
+public abstract class Entity<TId>(TId id) : IEquatable<Entity<TId>>
+    where TId : ValueObject
 {
-    protected Guid Id { get; private init; } = id;
+    protected TId Id { get; private init; } = id;
 
-    public static bool operator ==(Entity? left, Entity? right)
+    public override bool Equals(object? obj) => obj switch
     {
-        if (left is null || right is null)
-            return false;
+        Entity<TId> entity => Equals(entity),
+        _ => false,
+    };
 
-        return Equals(left, right);
-    }
-
-    public static bool operator !=(Entity? left, Entity? right)
+    public bool Equals(Entity<TId>? other) => other switch
     {
-        return !Equals(left, right);
-    }
+        Entity<TId> entity => Id.Equals(entity.Id),
+        _ => false,
+    };
 
-    public override bool Equals(object? obj)
+    public static bool operator ==(Entity<TId>? left, Entity<TId>? right) => (left, right) switch
     {
-        if (obj is null)
-            return false;
-        if (obj.GetType() != GetType())
-            return false;
-        if (obj is not Entity entity)
-            return false;
+        (Entity<TId> leftEntity, Entity<TId> rightEntity) => leftEntity.Equals(rightEntity),
+        _ => false,
+    };
 
-        return Id == entity.Id;
-    }
-
-    public bool Equals(Entity? other)
+    public static bool operator !=(Entity<TId>? left, Entity<TId>? right)
     {
-        if (other is null)
-            return false;
-        if (other.GetType() != GetType())
-            return false;
-
-        return Id == other.Id;
+        return !(left == right);
     }
 
     public override int GetHashCode()

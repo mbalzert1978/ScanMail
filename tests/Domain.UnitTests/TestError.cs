@@ -1,81 +1,33 @@
-﻿namespace Domain.UnitTests;
+﻿using Domain.Primitives;
+using FluentAssertions;
 
-using Domain;
+namespace Domain.UnitTests;
 
 public class ErrorTests
 {
-    [Fact]
-    public void Error_WithEmptyCodeAndNonEmptyDescription_IsCreatedCorrectly()
+    [Theory]
+    [InlineData("", "Test Description", "Test Description")]
+    [InlineData("Test Code", "Test Description", "Test Description")]
+    [InlineData("Test Code", null, null)]
+    [InlineData("", null, null)]
+    public void Error_WhenCreatedWithVariousInputs_ShouldHaveCorrectCodeAndDescription(string code, string? description, string? expectedDescription)
     {
-        // Arrange
-        string code = string.Empty;
-        string description = "Test Description";
-
         // Act
-        Error error = new(code, description);
+        var error = new Error(code, description);
 
         // Assert
-        Assert.Equal(code, error.Code);
-        Assert.Equal(description, error.Description);
+        error.Code.Should().Be(code);
+        error.Description.Should().Be(expectedDescription);
     }
 
     [Fact]
-    public void Error_WithEmptyCodeAndNullDescription_IsCreatedCorrectly()
+    public void Error_WhenCreatedAsNone_ShouldHaveEmptyCodeAndDescription()
     {
-        // Arrange
-        string code = string.Empty;
-        string? description = null;
-
         // Act
-        Error error = new(code, description);
+        var error = Error.None;
 
         // Assert
-        Assert.Equal(code, error.Code);
-        Assert.Null(error.Description);
-    }
-
-    [Fact]
-    public void Error_WithNonEmptyCodeAndNonEmptyDescription_IsCreatedCorrectly()
-    {
-        // Arrange
-        string code = "Test Code";
-        string description = "Test Description";
-
-        // Act
-        Error error = new(code, description);
-
-        // Assert
-        Assert.Equal(code, error.Code);
-        Assert.Equal(description, error.Description);
-    }
-
-    [Fact]
-    public void Error_WithNonEmptyCodeAndNullDescription_IsCreatedCorrectly()
-    {
-        // Arrange
-        string code = "Test Code";
-        string? description = null;
-
-        // Act
-        Error error = new(code, description);
-
-        // Assert
-        Assert.Equal(code, error.Code);
-        Assert.Null(error.Description);
-    }
-
-    [Fact]
-    public void Error_WithNone_HasEmptyCodeAndDescription()
-    {
-        // Arrange
-        string expectedCode = string.Empty;
-        string expectedDescription = string.Empty;
-
-        // Act
-        Error error = Error.None;
-
-        // Assert
-        Assert.Equal(expectedCode, error.Code);
-        Assert.Equal(expectedDescription, error.Description);
+        error.Code.Should().BeEmpty();
+        error.Description.Should().BeEmpty();
     }
 }
