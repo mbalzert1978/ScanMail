@@ -7,8 +7,6 @@ public class ResultTests
 {
     private static Error GetTestError() => new("Error code", "Error message");
 
-
-
     private static Result<int, int> Square(int x) => Result<int, int>.Ok(x * x);
 
     private static Result<int, int> Err(int x) => Result<int, int>.Err(x);

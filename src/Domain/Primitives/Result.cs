@@ -207,19 +207,17 @@ public abstract class Result<T, E>
     /// </remarks>
     public static Result<U, Exception> Try<U>(Func<U> func) where U : notnull
     {
+        try
         {
-            try
+            return func() switch
             {
-                var result = func();
-                if (result is null)
-                    return Result<U, Exception>.Err(new ArgumentNullException(nameof(func), NotNullMessage));
-                return Result<U, Exception>.Ok(result);
-            }
-            catch (Exception ex)
-            {
-                return Result<U, Exception>.Err(ex);
-
-            }
+                null => Result<U, Exception>.Err(new ArgumentNullException(nameof(func), NotNullMessage)),
+                U result => Result<U, Exception>.Ok(result),
+            };
+        }
+        catch (Exception ex)
+        {
+            return Result<U, Exception>.Err(ex);
         }
     }
 
@@ -232,14 +230,11 @@ public abstract class Result<T, E>
         /// </summary>
         /// <param name="obj">The object to compare with the current object.</param>
         /// <returns>True if the specified object is equal to the current object; otherwise, false.</returns>
-        public override bool Equals(object? obj)
+        public override bool Equals(object? obj) => obj switch
         {
-            if (obj is null || obj.GetType() != GetType())
-                return false;
-
-            var result = (ResultBase<TValue>)obj;
-            return Equals(InternalValue, result.InternalValue);
-        }
+            ResultBase<TValue> other => Equals(InternalValue, other.InternalValue),
+            _ => false
+        };
 
         /// <summary>
         /// Serves as the default hash function.
@@ -250,13 +245,11 @@ public abstract class Result<T, E>
             return InternalValue?.GetHashCode() * 41 ?? 0;
         }
 
-        public static bool operator ==(ResultBase<TValue>? left, ResultBase<TValue>? right)
+        public static bool operator ==(ResultBase<TValue>? left, ResultBase<TValue>? right) => (left, right) switch
         {
-            if (ReferenceEquals(left, right)) return true;
-            if (left is null || right is null) return false;
-
-            return left.Equals(right);
-        }
+            (ResultBase<TValue> leftResult, ResultBase<TValue> rightResult) => Equals(leftResult.InternalValue, rightResult.InternalValue),
+            _ => false
+        };
 
         public static bool operator !=(ResultBase<TValue>? left, ResultBase<TValue>? right)
         {
