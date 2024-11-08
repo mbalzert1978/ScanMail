@@ -1,0 +1,68 @@
+name: C# CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: '8.0.x'  # Adjust this to your project's .NET version
+
+    - name: Restore dependencies
+      run: dotnet restore
+
+    - name: Build
+      run: dotnet build --no-restore
+
+    - name: Test
+      run: dotnet test --no-build --verbosity normal
+
+  format:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: '8.0.x'  # Adjust this to your project's .NET version
+
+    - name: Install dotnet-format
+      run: dotnet tool install -g dotnet-format
+
+    - name: Format code
+      run: dotnet format --verify-no-changes
+
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: '8.0.x'  # Adjust this to your project's .NET version
+
+    - name: Install dotnet-roslynator
+      run: dotnet tool install -g roslynator.dotnet.cli
+
+    - name: Run Roslynator
+      run: roslynator analyze --output roslynator-report.txt
+
+    - name: Upload Roslynator report
+      uses: actions/upload-artifact@v3
+      with:
+        name: roslynator-report
+        path: roslynator-report.txt
