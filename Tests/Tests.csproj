@@ -24,6 +24,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\FileHandler\FileHandler.csproj" />
+    <ProjectReference Include="..\Result\Result.csproj" />
   </ItemGroup>
 
 </Project>

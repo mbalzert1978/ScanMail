@@ -1,6 +1,7 @@
 using System.Text;
 using FileHandler.Adapter;
 using FileHandler.IO;
+using Xunit;
 
 namespace Tests {
     public class End2EndFileAdapterTests : IDisposable {

@@ -1,5 +1,6 @@
 using System.Text;
 using FileHandler.Adapter;
+using Xunit;
 
 namespace Tests;
 
