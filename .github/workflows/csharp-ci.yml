@@ -62,7 +62,7 @@ jobs:
       run: roslynator analyze --output roslynator-report.txt
 
     - name: Upload Roslynator report
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: roslynator-report
         path: roslynator-report.txt
