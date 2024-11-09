@@ -61,10 +61,7 @@ jobs:
     - name: Run Roslynator
       run: |
         roslynator analyze ScanMail.sln \
-          --output roslynator-report.xml \
-          --exclude "**/*Test*/**/*.cs" "**/*Tests*/**/*.cs" "**/obj/**" "**/bin/**" \
-          --severity-level warning \
-          --verbosity normal
+          --exclude "**/*Test*/**/*.cs" "**/*Tests*/**/*.cs" "**/obj/**" "**/bin/**"
 
     - name: Upload Roslynator report
       uses: actions/upload-artifact@v4
