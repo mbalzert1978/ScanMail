@@ -69,3 +69,48 @@ csharp_style_deconstructed_variable_declaration = true:suggestion
 csharp_prefer_simple_default_expression = true:suggestion
 csharp_style_pattern_local_over_anonymous_function = true:suggestion
 csharp_style_inlined_variable_declaration = true:suggestion
+
+# Roslynator configuration
+
+# Set severity for all Roslynator analyzers
+dotnet_analyzer_diagnostic.category-roslynator.severity = warning
+
+# Enable all Roslynator analyzers by default
+roslynator_analyzers.enabled_by_default = true
+
+# Enable all Roslynator refactorings
+roslynator_refactorings.enabled = true
+
+# Enable all compiler diagnostic fixes
+roslynator_compiler_diagnostic_fixes.enabled = true
+
+# Configure specific Roslynator analyzers
+dotnet_diagnostic.RCS1001.severity = warning    # Add braces (when expression spans over multiple lines)
+dotnet_diagnostic.RCS1003.severity = warning    # Add braces to if-else (when expression spans over multiple lines)
+dotnet_diagnostic.RCS1005.severity = warning    # Simplify nested using statements
+dotnet_diagnostic.RCS1006.severity = warning    # Merge 'else' with nested 'if'
+dotnet_diagnostic.RCS1015.severity = warning    # Use nameof operator
+dotnet_diagnostic.RCS1018.severity = warning    # Add accessibility modifiers
+dotnet_diagnostic.RCS1021.severity = warning    # Simplify lambda expression
+dotnet_diagnostic.RCS1032.severity = warning    # Remove redundant parentheses
+dotnet_diagnostic.RCS1036.severity = warning    # Remove redundant empty line
+dotnet_diagnostic.RCS1037.severity = warning    # Remove trailing white-space
+dotnet_diagnostic.RCS1038.severity = warning    # Remove empty statement
+dotnet_diagnostic.RCS1043.severity = warning    # Remove 'partial' modifier from type with a single part
+dotnet_diagnostic.RCS1057.severity = warning    # Add empty line between declarations
+dotnet_diagnostic.RCS1060.severity = warning    # Declare each type in separate file
+dotnet_diagnostic.RCS1061.severity = warning    # Merge 'if' with nested 'if'
+dotnet_diagnostic.RCS1069.severity = warning    # Remove unnecessary case label
+dotnet_diagnostic.RCS1074.severity = warning    # Remove redundant constructor
+dotnet_diagnostic.RCS1090.severity = warning    # Add call to 'ConfigureAwait(false)'
+dotnet_diagnostic.RCS1123.severity = warning    # Add parentheses when necessary
+dotnet_diagnostic.RCS1146.severity = warning    # Use conditional access
+dotnet_diagnostic.RCS1161.severity = warning    # Enumerate boolean expressions first
+
+# Disable specific Roslynator refactorings if needed
+# roslynator_refactoring.RR0001.enabled = false  # Invert if-else
+
+# Configure Roslynator code fixes
+roslynator_refactoring.RCS1015.enabled = true   # Use nameof operator (code fix)
+roslynator_refactoring.RCS1021.enabled = true   # Simplify lambda expression (code fix)
+
