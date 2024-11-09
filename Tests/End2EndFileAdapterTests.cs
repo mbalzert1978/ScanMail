@@ -25,9 +25,10 @@ namespace Tests {
         [Fact]
         public async Task ReadFile_WhenFileExists_ShouldReturnCorrectContent() {
             // Arrange
-            var fileName = "testFile.txt";
+            const string fileName = "testFile.txt";
+            const string expectedContent = "Hello, World!";
+
             var filePath = Path.Combine(_testDirectory, fileName);
-            var expectedContent = "Hello, World!";
             var uriPath = new Uri(filePath);
 
             File.WriteAllText(filePath, expectedContent);
@@ -44,7 +45,7 @@ namespace Tests {
         [Fact]
         public async Task WriteFile_WhenGivenBytes_ShouldWriteCorrectContent() {
             // Arrange
-            var fileName = "test/testFile.txt";
+            const string fileName = "test/testFile.txt";
             var filePath = Path.Combine(_testDirectory, fileName);
             var content = Encoding.UTF8.GetBytes("Hello, World!");
             var uriPath = new Uri(filePath);

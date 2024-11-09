@@ -4,8 +4,8 @@ namespace FileHandler.Adapter.Mocks;
 
 public class MockReader : IReader {
     private readonly Dictionary<string, byte[]> _fileSystem = [];
-    private bool _exists = false;
-    private Exception? _exception = null;
+    private bool _exists;
+    private Exception? _exception;
 
     public void AddFile(string path, byte[] content) {
         _fileSystem[path] = content;

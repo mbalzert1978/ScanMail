@@ -4,10 +4,11 @@ namespace FileHandler.Adapter.Mocks;
 
 public class MockWriter : IWriter {
     private readonly Dictionary<string, byte[]> _fileSystem = [];
-    private Exception? _exception = null;
-    private string? _getDirectoryOverride = null;
+    private Exception? _exception;
+    private string? _getDirectoryOverride;
 
     public void SetException(Exception exception) => _exception = exception;
+
     public void SetGetDirectoryNameOverride(string? path) => _getDirectoryOverride = path;
 
     public Task WriteAllBytesAsync(string path, byte[] bytes, CancellationToken cancellationToken) {
@@ -17,6 +18,7 @@ public class MockWriter : IWriter {
         _fileSystem[path] = bytes;
         return Task.CompletedTask;
     }
+
     public string? GetDirectoryName(string? path) {
         if (_getDirectoryOverride is not null)
             path = _getDirectoryOverride;
@@ -29,9 +31,11 @@ public class MockWriter : IWriter {
         return path[..lastSlashIndex];
     }
 
-    public byte[]? GetFileContents(string path) => _fileSystem.TryGetValue(path, out var content) ? content : null;
+    public byte[]? GetFileContents(string path) =>
+        _fileSystem.TryGetValue(path, out var content) ? content : null;
 
-    public bool DirectoryExists(string? path) => !string.IsNullOrEmpty(path) && _fileSystem.Keys.Any(k => k.StartsWith(path));
+    public bool DirectoryExists(string? path) =>
+        !string.IsNullOrEmpty(path) && _fileSystem.Keys.Any(k => k.StartsWith(path));
 
-    public void CreateDirectory(string path) { } // No-op in this mock implementation
+    public void CreateDirectory(string path) { }
 }

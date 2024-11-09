@@ -21,7 +21,9 @@ public class FileIoTestApi {
     public void SetReadException(Exception exception) => _mockReader.SetException(exception);
 
     public void SetWriteException(Exception exception) => _mockWriter.SetException(exception);
-    public void SetWriterDirectoryOverride(string? path) => _mockWriter.SetGetDirectoryNameOverride(path);
+
+    public void SetWriterDirectoryOverride(string? path) =>
+        _mockWriter.SetGetDirectoryNameOverride(path);
 
     public async Task<Result<byte[]>> ReadFile(
         Uri filePath,

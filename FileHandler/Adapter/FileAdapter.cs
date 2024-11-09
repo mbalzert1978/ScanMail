@@ -57,14 +57,17 @@ public class FileAdapter(IReader reader, IWriter writer) : IFileReader, IFileWri
         if (data.Length == 0) {
             return Err<Unit>(BYTES_EMPTY, filePath.LocalPath);
         }
+
         try {
             string? dir = writer.GetDirectoryName(filePath.LocalPath);
 
-            if (dir is null)
+            if (dir is null) {
                 return Err<Unit>(INVALID_DIRECTORY_PATH, filePath.LocalPath);
+            }
 
-            if (!writer.DirectoryExists(dir))
+            if (!writer.DirectoryExists(dir)) {
                 writer.CreateDirectory(dir);
+            }
 
             await writer.WriteAllBytesAsync(filePath.LocalPath, data, cancellationToken);
         } catch (UnauthorizedAccessException ex) {

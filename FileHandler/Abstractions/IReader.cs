@@ -1,5 +1,3 @@
-using Result;
-
 namespace FileHandler.Abstractions;
 
 public interface IReader {
