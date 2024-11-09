@@ -62,7 +62,6 @@ jobs:
       run: |
         roslynator analyze ScanMail.sln \
           --output roslynator-report.xml \
-          --ignore-analyzer-references \
           --exclude "**/*Test*/**/*.cs" "**/*Tests*/**/*.cs" "**/obj/**" "**/bin/**" \
           --severity-level warning \
           --verbosity normal
