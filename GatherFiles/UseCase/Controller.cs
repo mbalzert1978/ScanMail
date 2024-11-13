@@ -6,17 +6,15 @@ using static RustyOptions.Result;
 
 namespace GatherFiles.UseCase;
 
+// var reader = new SystemFileWrapper();
+// var adapter = new FileAdapter(reader);
+// var interactor = new GatherInteractor(adapter);
 public class GatherController(IUnprocessedRepository repository, IInteractor interactor) {
     public async Task<Result<Unprocessed, GatherError>> GatherFilesAsync(
-        string source,
+        GatherRequestFrom request,
         CancellationToken cancellationToken = default
-    ) {
-        var request = new GatherRequestFrom(new Uri(source));
-        // var reader = new SystemFileWrapper();
-        // var adapter = new FileAdapter(reader);
-        // var interactor = new GatherInteractor(adapter);
-
-        return await interactor
+    ) =>
+        await interactor
             .Handle(request, cancellationToken)
             .AndThenAsync(unprocessed => {
                 repository.Add(unprocessed);
@@ -27,5 +25,4 @@ public class GatherController(IUnprocessedRepository repository, IInteractor int
                         Err<Unprocessed, GatherError>(GatherError.FromString(exc!.Message))
                     );
             });
-    }
 }
