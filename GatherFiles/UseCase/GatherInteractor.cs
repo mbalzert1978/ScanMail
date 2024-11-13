@@ -6,7 +6,7 @@ using RustyOptions.Async;
 namespace GatherFiles.UseCase;
 
 public class GatherInteractor(IFileReader reader) : IInteractor {
-    public async Task<Result<Unprocessed, GatherError>> GatherFilesAsync(
+    public async Task<Result<Unprocessed, GatherError>> Handle(
         GatherRequestFrom request,
         CancellationToken cancellationToken = default
     ) =>

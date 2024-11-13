@@ -5,7 +5,7 @@ using RustyOptions;
 namespace GatherFiles.Abstractions;
 
 public interface IInteractor {
-    public Task<Result<Unprocessed, GatherError>> GatherFilesAsync(
+    public Task<Result<Unprocessed, GatherError>> Handle(
         GatherRequestFrom request,
         CancellationToken cancellationToken = default
     );

@@ -17,7 +17,7 @@ public class GatherController(IUnprocessedRepository repository, IInteractor int
         // var interactor = new GatherInteractor(adapter);
 
         return await interactor
-            .GatherFilesAsync(request, cancellationToken)
+            .Handle(request, cancellationToken)
             .AndThenAsync(unprocessed => {
                 repository.Add(unprocessed);
                 return repository
