@@ -13,5 +13,5 @@ public class GatherInteractor(IFileReader reader) : IInteractor {
         await reader
             .ReadFilesAsync(request.Source, cancellationToken)
             .MapAsync(files => files.Select(FileContent.From))
-            .MapAsync(unprocessed => Unprocessed.From(unprocessed.ToArray()));
+            .MapAsync(Unprocessed.From);
 }
