@@ -15,48 +15,47 @@ public class FileAdapter(IReader reader) : IFileReader {
     private const string UNEXPECTED_ERROR =
         "Unexpected error occurred while {0} the file: {1}. {2}";
 
-    public async Task<
-        Result<ICollection<(string @Path, byte[] Content)>, GatherError>
-    > ReadFilesAsync(Uri @Path, CancellationToken cancellationToken = default) {
+    public async Task<Result<ICollection<FileData>, GatherError>> ReadFilesAsync(
+        Uri @Path,
+        CancellationToken cancellationToken = default
+    ) {
         if (@Path == null) {
-            return Err<ICollection<(string, byte[])>, GatherError>(FromString(PATH_EMPTY));
+            return Err<ICollection<FileData>, GatherError>(FromString(PATH_EMPTY));
         }
         if (!reader.DirectoryExists(@Path.LocalPath)) {
-            return Err<ICollection<(string, byte[])>, GatherError>(
+            return Err<ICollection<FileData>, GatherError>(
                 FromString(DIRECTORY_NOT_FOUND, @Path.LocalPath)
             );
         }
         try {
-            return Ok<ICollection<(string, byte[])>, GatherError>(
+            return Ok<ICollection<FileData>, GatherError>(
                 await Task.WhenAll(
                     reader
                         .EnumerateFiles(@Path.LocalPath)
-                        .Select(async file =>
-                            (
-                                @Path: file,
-                                Content: await reader.ReadAllBytesAsync(file, cancellationToken)
-                            )
-                        )
+                        .Select(async file => new FileData(
+                            file,
+                            await reader.ReadAllBytesAsync(file, cancellationToken)
+                        ))
                 )
             );
         } catch (UnauthorizedAccessException ex) {
-            return Err<ICollection<(string, byte[])>, GatherError>(
+            return Err<ICollection<FileData>, GatherError>(
                 FromString(ACCESS_DENIED, @Path.LocalPath, ex.Message)
             );
         } catch (System.Security.SecurityException ex) {
-            return Err<ICollection<(string, byte[])>, GatherError>(
+            return Err<ICollection<FileData>, GatherError>(
                 FromString(ACCESS_DENIED, @Path.LocalPath, ex.Message)
             );
         } catch (PathTooLongException ex) {
-            return Err<ICollection<(string, byte[])>, GatherError>(
+            return Err<ICollection<FileData>, GatherError>(
                 FromString(PATH_TOO_LONG, @Path.LocalPath, ex.Message)
             );
         } catch (IOException ex) {
-            return Err<ICollection<(string, byte[])>, GatherError>(
+            return Err<ICollection<FileData>, GatherError>(
                 FromString(IO_ERROR, @Path.LocalPath, ex.Message)
             );
         } catch (Exception ex) {
-            return Err<ICollection<(string, byte[])>, GatherError>(
+            return Err<ICollection<FileData>, GatherError>(
                 FromString(UNEXPECTED_ERROR, "reading", @Path.LocalPath, ex.Message)
             );
         }
