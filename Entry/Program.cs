@@ -12,7 +12,7 @@ var host = builder
     )
     .ConfigureServices(
         (hostContext, services) => {
-            services.AddScoped<IUnprocessedRepository, UnprocessedRepository>(); // TODO: Implement EF Core repository.
+            // services.AddScoped<IUnprocessedRepository, UnprocessedRepository>(); // TODO: Implement EF Core repository.
             services.AddScoped<IReader, SystemFileWrapper>();
             services.AddScoped<IFileReader, FileAdapter>();
             services.AddScoped<IInteractor, GatherInteractor>();
