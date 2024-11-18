@@ -10,4 +10,8 @@
     <PackageReference Include="RustyOptions" Version="0.10.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="../SharedKernel/SharedKernel.csproj" />
+  </ItemGroup>
+
 </Project>
