@@ -1,10 +1,7 @@
-using GatherFiles.Abstractions;
+using SharedKernel.Abstractions;
 
 namespace GatherFiles.Contracts;
 
-public readonly record struct GatherError(string Message) : IFromString<GatherError> {
-    public static GatherError FromString(string value) => new(value);
-
-    public static GatherError FromString(string value, params object[] args) =>
-        new(string.Format(value, args));
+public readonly record struct GatherError(string Message) : IFrom<string, GatherError> {
+    public static GatherError From(string value) => new(value);
 }

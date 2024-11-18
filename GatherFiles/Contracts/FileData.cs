@@ -1,12 +1,7 @@
+using SharedKernel.Abstractions;
+
 namespace GatherFiles.Contracts;
 
-public record struct FileData(string Path, byte[] Content) {
-    public static implicit operator (string Path, byte[] Content)(FileData value) =>
-        (value.Path, value.Content);
-
-    public static implicit operator FileData((string Path, byte[] Content) value) =>
-        new(value.Path, value.Content);
-
-    public readonly void Deconstruct(out string Path, out byte[] Content) =>
-        (Path, Content) = (this.Path, this.Content);
+public record struct FileData(string Path, byte[] Content) : IFrom<(string path, byte[] content), FileData> {
+    public static FileData From((string path, byte[] content) data) => new(data.path, data.content);
 }

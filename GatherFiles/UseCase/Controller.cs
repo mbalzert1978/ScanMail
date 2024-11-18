@@ -22,7 +22,7 @@ public class GatherController(IUnprocessedRepository repository, IInteractor int
                     .SaveAsync()
                     .MapAsync(_ => unprocessed)
                     .OrElseAsync(exc =>
-                        Err<Unprocessed, GatherError>(GatherError.FromString(exc!.Message))
+                        Err<Unprocessed, GatherError>(GatherError.From(exc!.Message))
                     );
             });
 }
