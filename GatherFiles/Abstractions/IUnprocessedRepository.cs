@@ -4,7 +4,7 @@ using RustyOptions;
 namespace GatherFiles.Abstractions;
 
 public interface IUnprocessedRepository {
-    public void Add(Unprocessed unprocessed);
+    public Task<Result<Unit, GatherError>> AddRangeAsync(Unprocessed unprocessed);
 
-    public Task<Result<Unit, Exception>> SaveAsync();
+    public Task<Result<Unit, GatherError>> SaveAsync();
 }
