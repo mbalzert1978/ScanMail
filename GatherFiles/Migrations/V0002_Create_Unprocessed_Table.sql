@@ -1,0 +1,7 @@
+CREATE TABLE Unprocessed (
+    Id BLOB PRIMARY KEY,
+    Files TEXT NOT NULL,
+    IsRead INTEGER DEFAULT 0
+    CreatedAt DATETIME DEFAULT CURRENT_TIMESTAMP,
+    ProcessedAt DATETIME,
+);
