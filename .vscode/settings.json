@@ -4,6 +4,7 @@
         "Cloneable",
         "interactor",
         "roslynator",
+        "Sqlite",
         "Xunit"
     ],
     "git.ignoreLimitWarning": true,
