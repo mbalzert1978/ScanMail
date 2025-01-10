@@ -7,10 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entry", "Entry\Entry.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{C1054E95-1389-49FE-8FF7-AD2891717485}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileHandler", "FileHandler\FileHandler.csproj", "{263616AF-7F07-4FA4-997F-CA4AAD7D4F96}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Result", "Result\Result.csproj", "{E451F19A-F35C-4BC2-9512-EBDD97633C94}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,14 +21,6 @@ Global
 		{C1054E95-1389-49FE-8FF7-AD2891717485}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C1054E95-1389-49FE-8FF7-AD2891717485}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C1054E95-1389-49FE-8FF7-AD2891717485}.Release|Any CPU.Build.0 = Release|Any CPU
-		{263616AF-7F07-4FA4-997F-CA4AAD7D4F96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{263616AF-7F07-4FA4-997F-CA4AAD7D4F96}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{263616AF-7F07-4FA4-997F-CA4AAD7D4F96}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{263616AF-7F07-4FA4-997F-CA4AAD7D4F96}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E451F19A-F35C-4BC2-9512-EBDD97633C94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E451F19A-F35C-4BC2-9512-EBDD97633C94}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E451F19A-F35C-4BC2-9512-EBDD97633C94}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E451F19A-F35C-4BC2-9512-EBDD97633C94}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
